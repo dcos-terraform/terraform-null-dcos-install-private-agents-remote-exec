@@ -12,10 +12,10 @@ module "dcos-private-agents-install" {
 
   bootstrap_private_ip = "${module.dcos-infrastructure.bootstrap.private_ip}"
   bootstrap_port       = "80"
-  os_user              = "${module.dcos-infrastructure.public_agents.os_user}"
+  os_user              = "${module.dcos-infrastructure.private_agents.os_user}"
   dcos_install_mode    = "install"
   dcos_version         = "${var.dcos_version}"
-  private_agent_ips     = ["${module.dcos-infrastructure.public_agents.public_ips}"]
+  private_agent_ips     = ["${module.dcos-infrastructure.private_agents.public_ips}"]
   num_private_agents    = "2"
 }
 ```
