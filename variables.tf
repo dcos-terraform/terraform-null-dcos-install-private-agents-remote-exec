@@ -30,3 +30,7 @@ variable "os_user" {
   default     = "centos"
   description = "The OS user to be used with ssh exec"
 }
+
+variable "depends_on" {
+  description = "modules are missing the depends_on feature. Faking this feature with input and output variables"
+}
