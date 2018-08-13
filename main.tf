@@ -39,6 +39,10 @@ module "dcos-mesos-private-agent" {
 resource "null_resource" "private-agents" {
   count = "${var.num_private_agents}"
 
+  triggers = {
+    dependency_id = "${join(",", var.depends_on)}"
+  }
+
   connection {
     host = "${element(var.private_agent_ips, count.index)}"
     user = "${var.os_user}"

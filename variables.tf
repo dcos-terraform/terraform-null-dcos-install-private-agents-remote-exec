@@ -32,5 +32,6 @@ variable "os_user" {
 }
 
 variable "depends_on" {
+  default     = []
   description = "modules are missing the depends_on feature. Faking this feature with input and output variables"
 }
