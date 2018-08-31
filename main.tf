@@ -33,6 +33,7 @@ module "dcos-mesos-private-agent" {
   # Only allow upgrade and install as installation mode
   dcos_install_mode = "${var.dcos_install_mode}"
   dcos_version      = "${var.dcos_version}"
+  dcos_skip_checks  = "${var.dcos_skip_checks}"
   role              = "dcos-mesos-agent"
 }
 
