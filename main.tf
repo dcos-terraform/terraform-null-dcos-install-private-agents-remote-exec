@@ -47,7 +47,6 @@ resource "null_resource" "private-agents" {
 
   triggers = {
     dependency_id = "${join(",", var.depends_on)}"
-    dcos_version  = "${var.dcos_version}"
   }
 
   connection {
