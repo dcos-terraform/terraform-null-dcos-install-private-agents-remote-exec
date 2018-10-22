@@ -24,7 +24,7 @@
 
 module "dcos-mesos-private-agent" {
   source  = "dcos-terraform/dcos-core/template"
-  version = "~> 0.0"
+  version = "~> 0.1"
 
   # source               = "/Users/julferts/git/github.com/fatz/tf_dcos_core"
   bootstrap_private_ip = "${var.bootstrap_private_ip}"
