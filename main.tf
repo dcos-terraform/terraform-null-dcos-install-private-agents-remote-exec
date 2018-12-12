@@ -9,7 +9,7 @@
  *```hcl
  * module "dcos-private-agents-install" {
  *   source  = "terraform-dcos/dcos-install-private-agents-remote-exec/null"
- *   version = "~> 0.1"
+ *   version = "~> 0.1.0"
  *
  *   bootstrap_private_ip = "${module.dcos-infrastructure.bootstrap.private_ip}"
  *   bootstrap_port       = "80"
@@ -24,7 +24,7 @@
 
 module "dcos-mesos-private-agent" {
   source  = "dcos-terraform/dcos-core/template"
-  version = "~> 0.1"
+  version = "~> 0.1.0"
 
   # source               = "/Users/julferts/git/github.com/fatz/tf_dcos_core"
   bootstrap_private_ip = "${var.bootstrap_private_ip}"

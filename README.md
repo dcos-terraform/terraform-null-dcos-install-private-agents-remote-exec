@@ -8,7 +8,7 @@ EXAMPLE
 ```hcl
 module "dcos-private-agents-install" {
   source  = "terraform-dcos/dcos-install-private-agents-remote-exec/null"
-  version = "~> 0.1"
+  version = "~> 0.1.0"
 
   bootstrap_private_ip = "${module.dcos-infrastructure.bootstrap.private_ip}"
   bootstrap_port       = "80"
