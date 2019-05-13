@@ -52,6 +52,7 @@ resource "null_resource" "private-agents" {
   connection {
     host = "${element(var.private_agent_ips, count.index)}"
     user = "${var.os_user}"
+    agent= true
   }
 
   provisioner "file" {
