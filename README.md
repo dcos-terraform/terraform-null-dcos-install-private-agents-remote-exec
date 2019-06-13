@@ -30,7 +30,7 @@ module "dcos-private-agents-install" {
 | bootstrap\_port | TCP port bootstrap nginx is listening on. Used to build the bootstrap URL. | string | `"80"` | no |
 | dcos\_install\_mode | Type of command to execute. Options: install or upgrade | string | `"install"` | no |
 | dcos\_skip\_checks | Upgrade option: Used to skip all dcos checks that may block an upgrade if any DC/OS component is unhealthly. (optional) applicable: 1.10+ | string | `"false"` | no |
-| dcos\_version | Specifies which DC/OS version instruction to use. Options: 1.12.3, 1.11.10, etc. See dcos_download_path or dcos_version tree for a full list. | string | `"1.11.3"` | no |
+| dcos\_version | Specifies which DC/OS version instruction to use. Options: 1.13.1, 1.12.3, 1.11.10, etc. See dcos_download_path or dcos_version tree for a full list. | string | `"1.11.3"` | no |
 | depends\_on | Modules are missing the depends_on feature. Faking this feature with input and output variables | list | `<list>` | no |
 | os\_user | The OS user to be used | string | `"centos"` | no |
 | trigger | Triggers for null resource | list | `<list>` | no |
